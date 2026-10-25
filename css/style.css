@@ -1,0 +1,620 @@
+
+/* 1. Basic settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #243746;
+    background: #f4f7fa;
+}
+
+/* 2. Navigation */
+.site-header {
+    background: #102536;
+    color: white;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e5a43b;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    color: #e5a43b;
+}
+
+/* 3. Hero section */
+.hero {
+    background: #18384d;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.eyebrow {
+    color: #c68b28;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 15px auto;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    color: #e0e8ee;
+    font-size: 18px;
+}
+
+/* 4. Buttons */
+.button {
+    display: inline-block;
+    background: #e5a43b;
+    color: #102536;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #f2bc60;
+}
+
+/* 5. General sections */
+.section {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.section h2 {
+    color: #102536;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+
+.about p:last-child,
+.contact p {
+    max-width: 750px;
+}
+
+/* 6. Service cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #dce5eb;
+    border-top: 4px solid #e5a43b;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(16, 37, 54, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-card h3 {
+    color: #18384d;
+    margin-top: 0;
+}
+
+/* 7. Contact section */
+.contact {
+    background: white;
+    max-width: 100%;
+    padding-left: max(25px, calc((100% - 1000px) / 2));
+    padding-right: max(25px, calc((100% - 1000px) / 2));
+}
+
+/* 8. Footer */
+.site-footer {
+    background: #102536;
+    color: #e0e8ee;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+}
+
+/* 9. Mobile responsiveness */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 20px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+}
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 37, 54, 0.97) 0%,
+            rgba(16, 37, 54, 0.82) 45%,
+            rgba(16, 37, 54, 0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    text-align: left;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.hero h1,
+.hero-text {
+    margin-left: 0;
+}
+
+.hero h1 {
+    max-width: 650px;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: 420px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 25px 20px;
+    }
+}
+
+/* Responsive improvements */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 6px 0;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    .logo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 8px 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .button {
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .site-footer {
+        padding: 20px 15px;
+    }
+}
+
+/* Contact form */
+
+.contact-form {
+    max-width: 650px;
+    margin-top: 25px;
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #102536;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+    color: #243746;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .button {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+/* Professional footer */
+
+.site-footer {
+    background: #102536;
+    color: #e0e8ee;
+    padding: 45px 25px 15px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-content h2 {
+    color: white;
+    font-size: 21px;
+}
+
+.footer-content h3 {
+    color: #e5a43b;
+    font-size: 16px;
+}
+
+.footer-content p {
+    color: #cbd5e1;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #e0e8ee;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #e5a43b;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #405565;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 10px;
+    background: #25D366;
+    color: #102536;
+    text-align: center;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe5d;
+}
+.logo img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    border-radius:50px;
+}
+
+.whatsapp-button i,
+.footer-contact a i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.whatsapp-button i {
+    color: #102536;
+}
+
+.footer-contact a:hover i {
+    color: #e5a43b;
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.whatsapp-icon {
+    background: #25D366;
+    color: white;
+}
+
+.email-icon {
+    background: #102536;
+    color: white;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon:hover {
+    background: #1ebe5d;
+}
+
+.email-icon:hover {
+    background: #e5a43b;
+    color: #102536;
+}
+
+/* Mobile navigation button */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 2px solid #e5a43b;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile screen styles */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Back-to-top button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #e5a43b;
+    color: #102536;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+    display: block;
+}
+
+.back-to-top:hover {
+    background: #102536;
+    color: white;
+}
+
+/* Scroll reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Professional footer */
+.site-footer {
+    background: #102536;
+    color: #ffffff;
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+}
+
+.footer-content h3 {
+    color: #e5a43b;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    max-width: 350px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #e5a43b;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #40515e;
+    text-align: center;
+    font-size: 14px;
+}
