@@ -618,3 +618,29 @@ img {
     text-align: center;
     font-size: 14px;
 }
+
+/* Click-to-call phone link */
+.contact-section a[href^="tel:"] {
+    color: #e5a43b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-section a[href^="tel:"]:hover {
+    text-decoration: underline;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #e5a43b;
+    outline-offset: 4px;
+}
+
+/* Make form fields easier to identify */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #e5a43b;
+    outline-offset: 2px;
+}
